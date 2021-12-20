@@ -1,6 +1,6 @@
-<app-login ></app-login>
-<div *ngIf="false" class="row">
-  <app-menu class="col-3"> </app-menu>
-  <app-home class="col-9"></app-home>
+<app-login *ngIf="false" ></app-login>
+<div *ngIf="true" class="row">
+  <app-menu class="contenair" style="height: auto; color: azure;" class="col-3"> </app-menu>
+  <router-outlet></router-outlet>
 </div>
 

@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+
+  listaMenu = [{"cod":1, "descricao":"Empresa"},
+   {"cod":1, "descricao":"Empresa"},
+    {"cod":2, "descricao":"Usuário"},
+    {"cod":3, "descricao":"Promissórias"},
+    {"cod":4, "descricao":"configurações"}
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
+   
   }
 
+ 
 }
+
