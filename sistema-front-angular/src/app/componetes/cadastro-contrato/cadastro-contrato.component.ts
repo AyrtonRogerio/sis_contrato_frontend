@@ -17,7 +17,7 @@ export class CadastroContratoComponent implements OnInit {
 
   formulario!: FormGroup;
 
-  listclinte: any[] = []
+  contratolist!: Contrato[] 
   constructor(
     private formBuider: FormBuilder,
     private service: CadastroContratoService
@@ -47,7 +47,7 @@ export class CadastroContratoComponent implements OnInit {
     this.service.listaContrato()
       .subscribe(
         (data: any) => {
-          this.listclinte = data
+          this.contratolist = data
         },
         error => {
           console.log(error)
@@ -67,6 +67,7 @@ export class CadastroContratoComponent implements OnInit {
             console.log("Foi")
             alert("Salvo")
             this.limparCampos()
+            this.listaContrato()
 
           },
           error => {

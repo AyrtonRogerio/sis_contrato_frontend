@@ -13,7 +13,7 @@ export class CadastroEmpresaComponent implements OnInit {
 
   formulario!: FormGroup;
 
-  listclinte: any[] = []
+  empresaList! : Empresa[] 
   constructor(
     private formBuider: FormBuilder,
     private service: CadastroEmpresaService
@@ -37,7 +37,7 @@ export class CadastroEmpresaComponent implements OnInit {
     this.service.listaEmpresa()
       .subscribe(
         (data: any) => {
-          this.listclinte = data
+          this.empresaList = data
         },
         error => {
           console.log(error)
@@ -57,6 +57,7 @@ export class CadastroEmpresaComponent implements OnInit {
             console.log("Foi")
             alert("Salvo")
             this.limparCampos()
+            this.listaEmpresa()
      
           },
           error => {
@@ -78,7 +79,7 @@ export class CadastroEmpresaComponent implements OnInit {
 
 
   validaCampos(): boolean {
-    return this.formulario.valid ? true : false
+    return this.formulario.valid? true : false
 
   }
 

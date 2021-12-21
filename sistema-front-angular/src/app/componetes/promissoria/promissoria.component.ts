@@ -75,6 +75,7 @@ export class PromissoriaComponent implements OnInit {
             console.log("Foi")
             alert("Salvo")
             this.limparCampos()
+            this.listaPromissoria()
 
           },
           error => {

@@ -34,6 +34,30 @@
             <input formControlName="descricao" type="text" class="form-control" >
           </div>
     </div>
-      <button (click)="OnSubmit()" type="button" class="btn btn-primary">Cadastrar Contrato</button>
+      <button (click)="OnSubmit()" type="button" class="btn btn-primary my-5">Cadastrar Contrato</button>
   </form>
+  <div class="mt-5" class="row">
   
+ 
+    <div class="col-11">
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Empresa </th>
+        <th scope="col">Cliente</th>
+        <th scope="col">Valor do Contrato</th>
+        <th scope="col">Descrição</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let contrato of contratolist">
+      <tr>
+        <td>{{contrato.empresa_id}}</td>
+        <td> {{contrato.cliente_id}}</td>
+        <td> {{contrato.valor_total}}</td>
+        <td> {{contrato.descricao}}</td>
+
+      </tr>
+    </tbody>
+   </table> 
+    </div>
+  </div>

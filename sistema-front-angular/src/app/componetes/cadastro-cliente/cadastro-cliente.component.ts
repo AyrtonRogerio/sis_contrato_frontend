@@ -17,7 +17,7 @@ export class CadastroClienteComponent implements OnInit {
   
   formulario!: FormGroup;
 
-  listclinte: any[] = []
+  listclinte!: Cliente[]
   constructor(
     private formBuider: FormBuilder,
     private service: CadastroClienteService
@@ -64,6 +64,7 @@ export class CadastroClienteComponent implements OnInit {
             console.log("Foi")
             alert("Salvo")
             this.limparCampos()
+            this.listaCliente()
      
           },
           error => {

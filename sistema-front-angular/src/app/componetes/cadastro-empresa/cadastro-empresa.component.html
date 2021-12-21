@@ -14,5 +14,26 @@
       </div>
     </div>
   
-    <button (click)="OnSubmit()" type="button" class="btn btn-primary">Cadastrar Empresas</button>
+    <button (click)="OnSubmit()" type="button" class="btn btn-primary my-5">Cadastrar Empresas</button>
 </form>
+
+<div class="mt-5" class="row">
+  
+ 
+  <div class="col-11">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome da Empresa</th>
+      <th scope="col">CNPJ</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let empresa of empresaList">
+    <tr>
+      <td>{{empresa.nome}}</td>
+      <td> {{empresa.cnpj}}</td>
+    </tr>
+  </tbody>
+ </table> 
+  </div>
+</div>

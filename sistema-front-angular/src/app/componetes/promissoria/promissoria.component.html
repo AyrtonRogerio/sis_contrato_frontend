@@ -18,6 +18,26 @@
         </div>
     </div>
     
-      <button (click)="OnSubmit()" type="button" class="btn btn-primary">Salvar</button>
+      <button (click)="OnSubmit()" type="button" class="btn btn-primary my-5">Salvar</button>
   </form>
+  <div class="mt-5" class="row">
+  
+ 
+    <div class="col-11">
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Valor da Promissória </th>
+        <th scope="col">Contrato</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let promissoria of listapromissoria">
+      <tr>
+        <td>{{promissoria.valor}}</td>
+        <td> {{promissoria.contrato_id}}</td>
+      </tr>
+    </tbody>
+   </table> 
+    </div>
+  </div>
   
