@@ -1,1 +1,18 @@
-<p>cadastro-empresa</p>
+<div class="row">
+  <h3>Cadastro Empresa</h3>
+</div>
+
+<form [formGroup] = "formulario"> 
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Nome da Empresa</label>
+        <input formControlName="nome"  type="empresa" class="form-control" placeholder="Empresa S/A">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">CNPJ</label>
+        <input formControlName="cnpj" type="cnpj" class="form-control" id="" placeholder="XX.XXX.XXX/0001-XX. ">
+      </div>
+    </div>
+  
+    <button (click)="OnSubmit()" type="button" class="btn btn-primary">Sign in</button>
+</form>

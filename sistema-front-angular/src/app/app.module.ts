@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +13,7 @@ import { CadastroClienteComponent } from './componetes/cadastro-cliente/cadastro
 import { CadastroEmpresaComponent } from './componetes/cadastro-empresa/cadastro-empresa.component';
 import { CadastroContratoComponent } from './componetes/cadastro-contrato/cadastro-contrato.component';
 import { PromissoriaComponent } from './componetes/promissoria/promissoria.component';
+
 
 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -31,7 +34,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule, 
-    HttpClientModule
+    HttpClientModule, 
+    ReactiveFormsModule
    
   ],
   providers: [ ],
