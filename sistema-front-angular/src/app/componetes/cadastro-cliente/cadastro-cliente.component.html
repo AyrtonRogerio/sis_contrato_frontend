@@ -4,7 +4,7 @@
   <form [formGroup] = "formulario"> 
    <div class="containers">
     <div class="row">
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-5">
         <label for="inputEmail4">Nome da Cliente</label>
         <input formControlName="nome"  type="text" class="form-control" >
       </div>
@@ -12,7 +12,7 @@
         <label for="inputPassword4">CPF</label>
         <input formControlName="cpf" type="text" maks="000.000.000-00" class="form-control" >
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-5">
         <label for="inputEmail4">RG</label>
         <input formControlName="rg"  type="empresa" class="form-control" >
       </div>
@@ -20,7 +20,7 @@
         <label for="inputPassword4">Telefone</label>
         <input formControlName="telefone" type="text" class="form-control" >
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-5">
         <label for="inputEmail4">Endereço</label>
         <input formControlName="endereco_id"  type="text" class="form-control" >
       </div>
@@ -28,7 +28,7 @@
     </div>
   </div>
   
-    <button (click)="OnSubmit()" type="button" class="btn btn-primary">Sign in</button>
+    <button (click)="OnSubmit()" type="button" class="btn btn-primary">Cadastar Cliente</button>
 </form>
 
 

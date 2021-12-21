@@ -1,1 +1,23 @@
-<p>promissoria works!</p>
+<div class="row">
+    <h3>Emitir Nota</h3>
+  </div>
+  
+  <form [formGroup] = "formulario"> 
+      <div class="form-row">
+        <div class="form-group col-md-5">
+          <label for="inputEmail4">Valor do Contrato</label>
+          <input formControlName="valor"  type="number" class="form-control">
+        </div>
+        <div class="form-group col-md-5">
+          <label for="inputPassword4">Contrato</label>
+          <select class="form-control" formControlName="contrato" >
+            <option value="">selecione...</option>
+            <option *ngFor="let contrato of listaContrato" value="{{contrato.id}}">{{contrato.descricao}}</option>
+          
+        </select>
+        </div>
+    </div>
+    
+      <button (click)="OnSubmit()" type="button" class="btn btn-primary">Salvar</button>
+  </form>
+  

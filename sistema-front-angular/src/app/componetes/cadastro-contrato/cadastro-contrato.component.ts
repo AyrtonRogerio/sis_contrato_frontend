@@ -33,7 +33,7 @@ export class CadastroContratoComponent implements OnInit {
     this.formulario = this.formBuider.group({
 
       empresa: ['', Validators.required],
-      cliente: [null],
+      cliente: [''],
       valor:[null],
       parcelas:[null],
       descricao:[null]
@@ -105,7 +105,8 @@ export class CadastroContratoComponent implements OnInit {
     this.service.listaCliente()
       .subscribe(
         (data: any) => {
-          this.listaCliente = data
+          this.listaCliente = data 
+          console.log(this.listaEmpresa)
         },
         error => {
           console.log(error)
@@ -133,6 +134,7 @@ export class CadastroContratoComponent implements OnInit {
 }
 }
 export interface Contrato {
+  id?: number; 
   cliente_id: number;
   empresa_id: number;
   descricao: string
